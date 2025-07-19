@@ -468,4 +468,15 @@ abstract class Constants {
     SuraDataModel(suraID: 114, suraNameEN: "An-Nas", suraNameAR: "الناس", suraVersusNumber: "6")
   ];
 
+  static List<String> radioQura2List=[
+  "Ibrahim Al-Akdar",
+  "Akram Alalaqmi",
+  "Majed Al-Enezi",
+  "Malik shaibat Alhamed",
+  "Ibrahim Al-Akdar",
+  "Akram Alalaqmi",
+  "Majed Al-Enezi",
+  "Malik shaibat Alhamed",
+  ];
+
 }

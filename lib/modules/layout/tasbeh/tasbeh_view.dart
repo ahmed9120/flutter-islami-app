@@ -11,7 +11,8 @@ class TasbehView extends StatefulWidget {
   State<TasbehView> createState() => _TasbehViewState();
 }
 
-class _TasbehViewState extends State<TasbehView>with SingleTickerProviderStateMixin {
+class _TasbehViewState extends State<TasbehView>
+    with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   late Animation<double> _rotationAnimation;
 
@@ -25,10 +26,10 @@ class _TasbehViewState extends State<TasbehView>with SingleTickerProviderStateMi
       duration: const Duration(milliseconds: 500),
     );
 
-    _rotationAnimation = Tween<double>(begin: 0.0, end: pi * 2).animate(CurvedAnimation(
-      parent: _controller,
-      curve: Curves.easeInOut,
-    ));
+    _rotationAnimation = Tween<double>(
+      begin: 0.0,
+      end: pi * 2,
+    ).animate(CurvedAnimation(parent: _controller, curve: Curves.easeInOut));
   }
 
   @override
@@ -50,25 +51,31 @@ class _TasbehViewState extends State<TasbehView>with SingleTickerProviderStateMi
           Image.asset(Assets.tasbeh_tail_img, width: 93, height: 106),
           GestureDetector(
             onTap: onSebhaTap,
-            child: Expanded(
-              child: Container(
-                child: Stack(
-                  alignment: Alignment.center,
-                  children: [
-                    Transform.rotate(
-                      angle: (totalTapCount % 33) * (2 * pi / 8),
-                      child: Image.asset(Assets.sebha_body_img),
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(viewdZekr, textAlign: TextAlign.center, style: Theme.of(context).textTheme.headlineMedium,),
-                        Text(viewedCounter.toString(), textAlign: TextAlign.center, style: Theme.of(context).textTheme.headlineMedium,),
-                      ],
-                    ),
-                  ],
-                )
+            child: Container(
+              child: Stack(
+                alignment: Alignment.center,
+                children: [
+                  Transform.rotate(
+                    angle: (totalTapCount % 33) * (2 * pi / 8),
+                    child: Image.asset(Assets.sebha_body_img),
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        viewdZekr,
+                        textAlign: TextAlign.center,
+                        style: Theme.of(context).textTheme.headlineMedium,
+                      ),
+                      Text(
+                        viewedCounter.toString(),
+                        textAlign: TextAlign.center,
+                        style: Theme.of(context).textTheme.headlineMedium,
+                      ),
+                    ],
+                  ),
+                ],
               ),
             ),
           ),
@@ -76,23 +83,25 @@ class _TasbehViewState extends State<TasbehView>with SingleTickerProviderStateMi
       ),
     );
   }
-  List<String> tasbehList=[
+
+  List<String> tasbehList = [
     "سبحان الله",
     "الحمد لله",
     "الله اكبر",
-    "لا اله الا الله"
+    "لا اله الا الله",
   ];
-  String viewdZekr="";
-  int viewedCounter=0;
-  int index=0;
+  String viewdZekr = "";
+  int viewedCounter = 0;
+  int index = 0;
   int totalTapCount = 0;
-  void onSebhaTap(){
+
+  void onSebhaTap() {
     totalTapCount++;
-    if(index==tasbehList.length)index=0;
-    viewdZekr=tasbehList[index];
-    if(viewedCounter<5){
+    if (index == tasbehList.length) index = 0;
+    viewdZekr = tasbehList[index];
+    if (viewedCounter < 5) {
       viewedCounter++;
-    }else{
+    } else {
       index++;
       if (index == tasbehList.length) index = 0;
       viewedCounter = 0;

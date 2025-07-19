@@ -33,6 +33,6 @@ abstract class Assets{
   static const String hadeth_background_img="Assets/images/hadeth_background_img.png";
   static const String tasbeh_tail_img="Assets/images/tasbehTail.png";
   static const String sebha_body_img="Assets/images/SebhaBody.png";
-
-
+  static const String radio_unactive_img="Assets/images/radioUnActive.png";
+  static const String radio_active_img="Assets/images/radioActive.png";
 }
