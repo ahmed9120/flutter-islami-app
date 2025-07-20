@@ -1,16 +1,4 @@
 # islami_app
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![1.png](readme_images/1.png)![2.png](readme_images/2.png)
+![3.png](readme_images/3.png)![4.png](readme_images/4.png)
+![5.png](readme_images/5.png)![6.png](readme_images/6.png)
