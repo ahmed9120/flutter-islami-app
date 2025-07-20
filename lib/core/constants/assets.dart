@@ -35,4 +35,6 @@ abstract class Assets{
   static const String sebha_body_img="Assets/images/SebhaBody.png";
   static const String radio_unactive_img="Assets/images/radioUnActive.png";
   static const String radio_active_img="Assets/images/radioActive.png";
+  static const String morning_azkar_img="Assets/images/morningAzkar.png";
+  static const String event_azkar_img="Assets/images/eventAzkar.png";
 }
